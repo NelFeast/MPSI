@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .card {
+            border-radius: .25rem;
+            box-shadow: 0 4px 8px rgba(41, 41, 41, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6; 
+            font-size: 1.25rem; 
+            font-weight: bold;
+        }
+        .card-footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+        }
+        .category-img {
+            width: 37px;
+            height: 37px;
+        }
+        .carousel-item .card {
+            height: 300px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: white;
+            border-radius: 50%;
+        }
+        .carousel-control-prev-icon::after, .carousel-control-next-icon::after {
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand">
+                <img src="logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                <span>Jago Kamera</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pages</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Login / Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="carousel slide d-none d-md-block">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://sony.scene7.com/is/image/sonyglobalsolutions/GWX_DI_Categorypage_Interchangeable-lens%20Cameras_primary_tout_4000x980?$toutDesktop$&fmt=png-alpha" class="d-block w-100">
+                <div class="carousel-caption top-0 mt-5 d-md-block">
+                    <h1 class="text-start mt-4">Jago Kamera</h1>
+                    <p class="text-start" style="margin: 0;">Abadikan Momen Terbaikmu Bersama Kami</p>
+                    <p class="text-start" style="margin: 0;">Sewa Kamera Mudah dan Praktis</p>
+                    <p class="text-start" style="margin: 0;">Solusi Kamera Andal untuk Berbagai Acara</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Category -->
+        <div class="col-md-12 col-lg-12 mb-4 py-2">
+            <div class="text-center py-4">
+                <h2>Kategori</h2>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between">
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/browse-all.png" class="category-img" alt="Browse All">
+                    <span class="ms-2 text-black">Browse All</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/new.png" class="category-img" alt=">What's New">
+                    <span class="ms-2 text-black">What's New</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/camera.png" class="category-img" alt="Camera">
+                    <span class="ms-2 text-black">Camera</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/tripods.png" class="category-img" alt="Tripod">
+                    <span class="ms-2 text-black">Tripod</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/lenses.png" class="category-img" alt="Lenses">
+                    <span class="ms-2 text-black">Lenses</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/lightning.png" class="category-img" alt="Lightning">
+                    <span class="ms-2 text-black">Lightning</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/video-gear.png" class="category-img" alt="Video Gear">
+                    <span class="ms-2 text-black">Video Gear</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/audio.png" class="category-img" alt="Audio">
+                    <span class="ms-2 text-black">Audio</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/accessories.png" class="category-img" alt="Accessories">
+                    <span class="ms-2 text-black">Accessories</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/multimedia.png" class="category-img" alt="Multimedia">
+                    <span class="ms-2 text-black">Multimedia</span>
+                </a>
+                <a href="#" class="d-flex flex-column align-items-center text-decoration-none m-2">
+                    <img src="icon/item-request.png" class="category-img" alt="Item Request">
+                    <span class="ms-2 text-black">Item Request</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sorting -->
+        <div class="row">
+            <div class="col-md-12 col-lg-3 d-lg-block d-none">
+                <div class="row g-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Sort by</h2>
+                            <select class="form-select">
+                                <option value="Newest">Newest</option>
+                                <option value="Oldest">Oldest</option>
+                                <option value="Highest Price">Highest Price</option>
+                                <option value="Lowest Price">Lowest Price</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Filter by</h2>
+                            <p>Tipe Kamera</p>
+                            <div class="row g-2">
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">DSLR</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Mirrorless</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Action Camera</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Cinema Camera</label>
+                                </div>
+                            </div>
+                            <p class="mt-4">Merek</p>
+                            <div class="row g-2">
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Canon</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Nikon</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Sony</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Panasonic</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Fujifilm</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Olympus</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">GoPro</label>
+                                </div>
+                            </div>
+                            <p class="mt-4">Sensor</p>
+                            <div class="row g-2">
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">Full Frame</label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">APS-C</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-9 mb-4">
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="a7s.webp" class="card-img-top" alt="a7s">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Sony A7S</h5>
+                                <p class="card-text">Rp 250.000</p>
+                                <div class="mt-2">
+                                    <a href="#" class="btn btn-success">
+                                        <i class="fas fa-calendar-check"></i> Booking
+                                    </a>
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="fas fa-info-circle"></i> Detail
+                                    </a>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="a7s.webp" class="card-img-top" alt="a7s">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Sony A7S</h5>
+                                <p class="card-text">Rp 250.000</p>
+                                <div class="mt-2">
+                                    <a href="#" class="btn btn-success">
+                                        <i class="fas fa-calendar-check"></i> Booking
+                                    </a>
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="fas fa-info-circle"></i> Detail
+                                    </a>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="a7s.webp" class="card-img-top" alt="a7s">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Sony A7S</h5>
+                                <p class="card-text">Rp 250.000</p>
+                                <div class="mt-2">
+                                    <a href="#" class="btn btn-success">
+                                        <i class="fas fa-calendar-check"></i> Booking
+                                    </a>
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="fas fa-info-circle"></i> Detail
+                                    </a>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="a7s.webp" class="card-img-top" alt="a7s">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Sony A7S</h5>
+                                <p class="card-text">Rp 250.000</p>
+                                <div class="mt-2">
+                                    <a href="#" class="btn btn-success">
+                                        <i class="fas fa-calendar-check"></i> Booking
+                                    </a>
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="fas fa-info-circle"></i> Detail
+                                    </a>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center m-4">
+                    <button type="button" class="btn btn-outline-success">
+                        <i class="fas fa-refresh"></i> Load More Product
+                    </button>                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimoni -->
+        <div class="container my-4">
+            <div class="text-center py-4">
+                <h2>Testimoni</h2>
+            </div>
+            <div id="cCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="d-flex px-2 pt-3">
+                                <img src="./rektor.png" class="rounded-circle" alt="Rektor UNIKOM" width="75" height="75">
+                                <div class="ms-3">
+                                    <h6 class="m-0">Pa Rektor UNIKOM</h6>
+                                    <p class="m-0">Customer</p>
+                                    <div class="rating">
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star2.svg" alt="star" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pelayanan Yang Bagus</h5>
+                                <p class="card-text">Makin kesini makin ok pelayanannya, barang yang disewakannya makin macem macem.. saya banyak tertolong dengan adanya jasa sewa alat alat photografi. Haturnuhun Jago Kamera</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="d-flex px-2 pt-3">
+                                <img src="owo.jpg" class="rounded-circle" alt="Rektor UNIKOM" width="75" height="75">
+                                <div class="ms-3">
+                                    <h6 class="m-0">Pa Prabowo</h6>
+                                    <p class="m-0">Customer</p>
+                                    <div class="rating">
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star2.svg" alt="star" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pengalaman Yang Bagus</h5>
+                                <p class="card-text">pernah liat langsung ke lokasi nganter temen (fotographer) sewa kamera + lensa untuk acara wedding, tempatnya enak banget di bawahnya ada cafe dlu, di lantai 2 baru kita bisa lait banyak kamera dll bejibun banget dah :D</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="d-flex px-2 pt-3">
+                                <img src="donal.jpg" class="rounded-circle" alt="Rektor UNIKOM" width="75" height="75">
+                                <div class="ms-3">
+                                    <h6 class="m-0">Donald Trump</h6>
+                                    <p class="m-0">Customer</p>
+                                    <div class="rating">
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star.svg" alt="star" />
+                                        <img src="./star2.svg" alt="star" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">It was a very good experience</h5>
+                                <p class="card-text">They do have good selection of camera and lenses. i see they're keep improving.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote -->
+    <div style="background-color: #162CF112;">
+        <div class="d-flex">
+            <div class="p-5">
+                <div class="d-flex gap-4">
+                    <img src="quote.svg" class="rounded opacity-50" width="75" height="75">
+                    <img src="ali.JPG" class="rounded-circle" width="75" height="75">
+                    <div class="align-self-center">
+                        <h5 class="m-0">Ali Darmawan</h6>
+                        <p>Owner</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p>Jago Kamera adalah jasa penyewaan peralatan foto dan video yang penuh dengan dedikasi yang didirikan pada 2024 di Bandung (Indonesia), dan sekarang juga memiliki cabang di Bali sejak tahun 2018 dan di Tebet Jakarta sejak tahun 2019.
+                        Jago Kamera Rental menyediakan berbagai kamera, lensa, dan aksesoris untuk kebutuhan hobi serta pekerjaan anda, dengan harga yang terjangkau dan pelayanan dari hati untuk anda. Kami berkembang lebih baik lagi setiap harinya dan
+                        bertujuan agar menjadi jasa sewa alat foto dan video yang terbaik dan bisa anda andalkan. Kunjungi kami setiap saat
+                    </p>
+                </div>
+            </div>
+            <img src="kuotes.jpg" style="width: 25%; height: auto; object-fit: cover;" class="d-none d-lg-block">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white py-4" style="background-color: #252B42;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="text-uppercase">Info</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Price List</a></li>
+                        <li><a href="#" class="text-white">We Are Hiring</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-uppercase">Main Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">How to Rent</a></li>
+                        <li><a href="#" class="text-white">Rental Agreement</a></li>
+                        <li><a href="#" class="text-white">Favorite</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+6281268577006" class="text-white">(+62)8126-8577006</a></li>
+                        <li><a href="#" class="text-white">Bandung Dipatiukur</a></li>
+                        <li><a href="mailto:jagokamera@gmail.com" class="text-white">jagokamera@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border border-light border-1 opacity-100 m-3">
+            <div class="text-center">
+                <p class="mb-0">Made With Love By Jago Kamera All Right Reserved</p>
+            </div>
+        </div>
+    </footer>    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = new bootstrap.Carousel('#cCarousel', {
+                interval: false, // Disable auto-slide
+                wrap: false // Disable looping
+            });
+        });
+    </script>
+</body>
+</html>
